@@ -20,7 +20,7 @@ class PDOTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @var string DB password
 	 **/
-	private $database_password = 'root';
+	private $database_password = '';
 
 
 	/**
