@@ -3,13 +3,12 @@
 include './autoload.php';
 
 
-// Init
+// Connect
 	$pdo = new \HybridLogic\DB\Driver\PDO(array(
 		'datasource' => 'mysql:host=localhost;dbname=myapp_test',
 		'username'   => 'root',
 		'password'   => 'root',
 	));
-
 	$db = new \HybridLogic\DB($pdo);
 
 
