@@ -1,7 +1,11 @@
 DB Connection Library
 =====================
 
-A driver-agnostic database library for PHP.
+A driver-agnostic database library for PHP providing
+convenient methods for escaping, preparing and executing
+statements.
+
+[![Build Status](https://travis-ci.org/Dachande663/PHP-DB.png)](https://travis-ci.org/Dachande663/PHP-DB)
 
 
 0.0 Table of Contents
@@ -21,7 +25,9 @@ This library provides a simple way to connect to and query
 databases, regardless of the underlying connection driver
 used i.e. PDO or MySQLi.
 
-It handles normalizing preparing data and parsing results.
+HL\DB handles normalizing preparing data and parsing
+results. It currently includes just a PDO driver but
+additional libraries will be added.
 
 
 2.0 Examples
