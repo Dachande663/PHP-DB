@@ -1,0 +1,8 @@
+{
+	"name": "hybridlogic/db",
+	"description": "DB Connection Module",
+	"keywords": ["db", "mysql", "pdo", "sql", "query"],
+	"require": {
+		"php": ">=5.3.0"
+	}
+}
