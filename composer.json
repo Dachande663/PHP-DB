@@ -1,7 +1,15 @@
 {
 	"name": "hybridlogic/db",
-	"description": "DB Connection Module",
+	"description": "A driver-agnostic database library for PHP providing convenient methods for escaping, preparing and executing statements.",
 	"keywords": ["db", "mysql", "pdo", "sql", "query"],
+	"homepage": "https://github.com/Dachande663/PHP-DB",
+	"license": "MIT",
+	"authors": [{
+		"name": "Luke Lanchester",
+		"email": "luke@lukelanchester.com",
+		"homepage": "http://hybridlogic.co.uk",
+		"role": "Developer"
+	}],
 	"require": {
 		"php": ">=5.3.0"
 	}
