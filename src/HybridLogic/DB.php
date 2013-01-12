@@ -99,10 +99,15 @@ class DB {
 	 * @param string Raw SQL
 	 * @return string Prepared SQL
 	 **/
-	public function prepare($query) {
-		$args = func_get_args();
-		array_shift($args);
+	public function prepare($query, $args = null) {
+
+		if(!is_array($args)) {
+			$args = func_get_args();
+			array_shift($args);
+		}
+
 		return $this->driver->prepare($query, $args);
+
 	} // end func: prepare
 
 

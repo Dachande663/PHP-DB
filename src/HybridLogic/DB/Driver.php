@@ -70,6 +70,7 @@ abstract class Driver {
 			array_shift($args);
 		}
 
+
 		$query = str_replace(array("'?'", '"?"'), '?', $query);
 		$query = preg_replace('/\?/', '%s', $query);
 		$args = array_map(array($this, 'escape'), $args);

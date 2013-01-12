@@ -4,12 +4,12 @@ include './autoload.php';
 
 
 // Connect
-	$pdo = new \HybridLogic\DB\Driver\PDO(array(
+	$pdo = new HybridLogic\DB\Driver\PDO(array(
 		'datasource' => 'mysql:host=localhost;dbname=myapp_test',
 		'username'   => 'root',
 		'password'   => 'root',
 	));
-	$db = new \HybridLogic\DB($pdo);
+	$db = new HybridLogic\DB($pdo);
 
 
 // Setup
@@ -43,7 +43,7 @@ include './autoload.php';
 		'Rasmus Lerdorf', '1968-10-22', 'male',
 		'Guido van Rossum', '1956-01-31', 'male'
 	);
-	$result = $db->query($sql, \HybridLogic\DB::INSERT);
+	$result = $db->query($sql, HybridLogic\DB::INSERT);
 	echo "<p>Rows inserted: {$result['rows_affected']}</p>";
 
 
@@ -54,7 +54,7 @@ include './autoload.php';
 		WHERE `user_name` = ?
 	', '1955-10-28', 'Bill Gates');
 
-	$result = $db->query($sql, \HybridLogic\DB::UPDATE);
+	$result = $db->query($sql, HybridLogic\DB::UPDATE);
 	echo "<p>Rows updated: {$result}</p>";
 
 
@@ -64,7 +64,7 @@ include './autoload.php';
 		WHERE `date_of_birth` BETWEEN ? AND ?
 	', '1955-06-01', '1955-12-31');
 
-	$result = $db->query($sql, \HybridLogic\DB::DELETE);
+	$result = $db->query($sql, HybridLogic\DB::DELETE);
 	echo "<p>Rows deleted: {$result}</p>";
 
 
@@ -81,7 +81,7 @@ include './autoload.php';
 		}
 	}
 
-	$users = $db->query($sql, \HybridLogic\DB::SELECT, 'AppUser');
+	$users = $db->query($sql, HybridLogic\DB::SELECT, 'AppUser');
 
 	echo '<h4>Users</h4><ul>';
 	foreach($users as $user) {
